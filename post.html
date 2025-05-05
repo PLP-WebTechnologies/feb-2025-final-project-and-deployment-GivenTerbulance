@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Post</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>TechBlog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="post-page" id="post-content">
+    <!-- Content will be inserted here by JavaScript -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechBlog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const posts = {
+      1: {
+        title: "Understanding Python for Beginners",
+        date: "May 5, 2025",
+        content: `
+          <p>Python is a versatile and beginner-friendly programming language known for its readability.</p>
+          <h3>Why Learn Python?</h3>
+          <ul>
+            <li>Easy syntax</li>
+            <li>Massive community</li>
+            <li>Wide use in web, data science, automation, and more</li>
+          </ul>
+          <pre><code>print("Hello, world!")</code></pre>
+        `,
+        image: "data:image/webp;base64,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"
+      },
+      2: {
+        title: "How AI is Changing the World",
+        date: "May 4, 2025",
+        content: `
+          <p>AI is transforming industries from healthcare to finance.</p>
+          <h3>Examples of AI Impact</h3>
+          <ul>
+            <li>Medical diagnostics</li>
+            <li>Autonomous vehicles</li>
+            <li>Smart assistants</li>
+          </ul>
+        `,
+        image: "https://tse2.mm.bing.net/th/id/OIP.1BHtI3npYnjMQ3wwEdN-AQHaEp?cb=iwp1&rs=1&pid=ImgDetMain"
+      },
+      3: {
+        title: "Introduction to IoT Devices",
+        date: "May 3, 2025",
+        content: `
+          <p>IoT connects everyday devices to the internet, enabling automation and monitoring.</p>
+          <h3>Common IoT Devices</h3>
+          <ul>
+            <li>Smart thermostats</li>
+            <li>Wearable devices</li>
+            <li>Connected appliances</li>
+          </ul>
+        `,
+        image: "https://th.bing.com/th/id/OIP.PhENcuEZvN4lFYDllC3OSgHaEO?w=315&h=180&c=7&r=0&o=7&cb=iwp1&pid=1.7&rm=3"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const postId = params.get("id");
+    const post = posts[postId];
+
+    if (post) {
+      document.getElementById("post-content").innerHTML = `
+        <h2>${post.title}</h2>
+        <p class="post-meta">Published: ${post.date}</p>
+        <img src="${post.image}" alt="${post.title}" class="post-banner"/>
+        <article>${post.content}</article>
+        <a href="index.html" class="read-more">← Back to Home</a>
+      `;
+    } else {
+      document.getElementById("post-content").innerHTML = "<h2>Post not found.</h2>";
+    }
+  </script>
+
+</body>
+</html>
