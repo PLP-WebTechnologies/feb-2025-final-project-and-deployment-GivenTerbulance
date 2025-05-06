@@ -20,6 +20,9 @@ TechBlog/
 ├── /images # Folder for images used in posts or background
 └── README.md # Project documentation
 
+##  🖥 💻The link od deployment:
+https://giventerbulance.github.io/my_website/
+
 🛠 Technologies Used
 HTML5
 
